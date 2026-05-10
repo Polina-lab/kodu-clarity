@@ -1,0 +1,109 @@
+{
+  "topbar": { "hours": "E–L 9:00–19:00", "phone": "+372 555 1234", "email": "info@kodujalagi.ee" },
+  "nav": {
+    "calculator": "Kalkulaator", "about": "Meist", "advantages": "Eelised",
+    "services": "Teenused", "portfolio": "Portfoolio", "process": "Kuidas töötame",
+    "faq": "KKK", "reviews": "Arvustused", "contact": "Kontakt", "cta": "Tasuta konsultatsioon"
+  },
+  "hero": {
+    "eyebrow": "Kodu, mis hingab ilu",
+    "title": "Laed, mis loovad kodutunde",
+    "subtitle": "Disainime ja paigaldame elegantseid lae-lahendusi, mis muudavad iga ruumi soojaks, kaasaegseks ja ajatuks.",
+    "support": "Üle 10 aasta kogemust • Garantii kuni 12 aastat • Tasuta mõõdistus"
+  },
+  "calc": {
+    "title": "Hinnakalkulaator",
+    "subtitle": "Saate esialgse hinnangu mõne sekundiga",
+    "area": "Laepindala (m²)",
+    "type": "Lae tüüp",
+    "lamps": "Lampide arv",
+    "pipes": "Torude arv",
+    "from": "Alates",
+    "breakdown": "Kalkulatsiooni jaotus",
+    "base": "Põhihind",
+    "lighting": "Valgustid",
+    "wiring": "Torud / juhtmed",
+    "order": "Telli",
+    "contact": "Võta ühendust",
+    "msg": "Soovin pakkumist: tüüp {{type}}, pindala {{area}} m², lampe {{lamps}}, torusid {{pipes}}. Esialgne hind alates {{price}} €."
+  },
+  "services": {
+    "title": "Meie teenused",
+    "subtitle": "Kuus kategooriat, üks lubadus — ilus ja kestev tulemus",
+    "items": {
+      "stretch": { "name": "Pinguldatud laed", "desc": "Sile, peegelläikega või matt pind, mis sobib igasse ruumi." },
+      "suspended": { "name": "Ripplaed", "desc": "Mitmetasandilised gipskartoonist konstruktsioonid kaasaegse ilmega." },
+      "acoustic": { "name": "Akustilised laed", "desc": "Vähendavad müra ja loovad mõnusa, vaikse õhkkonna." },
+      "lighting": { "name": "Lae valgustus", "desc": "Integreeritud LED-lahendused — pehme valgus täpselt sinna, kus vaja." },
+      "modern": { "name": "Kaasaegsed laed", "desc": "Minimalistlik disain, peen detailitöö ja puhtad jooned." },
+      "custom": { "name": "Eritellimuslahendused", "desc": "Sinu visioon — meie teostus. Iga projekt on ainulaadne." }
+    }
+  },
+  "advantages": {
+    "title": "Miks valida Kodu ja Lagi",
+    "items": {
+      "quality": { "t": "Kvaliteetsed materjalid", "d": "Kasutame ainult sertifitseeritud Euroopa tootjate materjale." },
+      "precise": { "t": "Täpne paigaldus", "d": "Iga projekt mõõdetakse ja teostatakse millimeetri täpsusega." },
+      "cozy": { "t": "Kodune disain", "d": "Loome lahendusi, mis sobivad just sinu kodu õhustikku." },
+      "fast": { "t": "Kiire teostus", "d": "Enamik töid valmib 1–3 päevaga, ilma tolmu ja kaoseta." },
+      "warranty": { "t": "Pikk garantii", "d": "Kuni 12 aastat garantiid materjalile ja paigaldusele." },
+      "experts": { "t": "Kogenud meistrid", "d": "Üle 10 aasta praktikat ja sadu rahulolevaid kliente." },
+      "clean": { "t": "Puhas tööprotsess", "d": "Korrastame ruumi pärast töid — sina vaid naudid tulemust." },
+      "individual": { "t": "Personaalne lähenemine", "d": "Iga klient ja iga ruum saab unikaalse lahenduse." }
+    }
+  },
+  "portfolio": {
+    "title": "Tehtud tööd",
+    "subtitle": "Valik meie viimaste aastate projektidest",
+    "filters": {
+      "all": "Kõik", "stretch": "Pinguldatud", "suspended": "Ripplaed",
+      "acoustic": "Akustilised", "lighting": "Valgustusega", "modern": "Kaasaegsed", "custom": "Eritellimus"
+    },
+    "msg": "Mind huvitab portfoolio projekt: {{title}}."
+  },
+  "process": {
+    "title": "Kuidas me töötame",
+    "subtitle": "Lihtne ja läbipaistev protsess esimesest sõnumist kuni valmis laeni",
+    "steps": [
+      { "t": "Päring", "d": "Saadad meile sõnumi või helistad — vastame samal päeval." },
+      { "t": "Konsultatsioon", "d": "Räägime läbi soovid, näitame näidiseid ja materjale." },
+      { "t": "Mõõdistus ja plaan", "d": "Tuleme kohale, mõõdistame ja koostame täpse pakkumise." },
+      { "t": "Paigaldus", "d": "Teostame töö kiirelt, puhtalt ja täpselt kokkulepitud ajal." },
+      { "t": "Valmis tulemus", "d": "Üleandmine, lõppülevaatus ja garantii — sina naudid kodu." }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "items": [
+      { "q": "Kui palju maksab uus lagi?", "a": "Hinnad algavad 25 €/m². Täpne hind sõltub lae tüübist, pindalast ja valgustusest. Kasuta kalkulaatorit esialgseks hinnaks." },
+      { "q": "Kui kaua paigaldus kestab?", "a": "Tavalises korteris valmib lagi 1–3 päevaga. Suuremate projektide puhul lepime aja kokku ette." },
+      { "q": "Milliseid materjale kasutate?", "a": "Töötame ainult sertifitseeritud Euroopa tootjate (Saksamaa, Prantsusmaa) PVC- ja kangasmaterjalidega." },
+      { "q": "Kui pikk on garantii?", "a": "Anname materjalile kuni 12 aastat ja paigaldusele 5 aastat garantiid." },
+      { "q": "Kas laed vajavad hooldust?", "a": "Ei. Piisab niiske lapiga pühkimisest paar korda aastas." },
+      { "q": "Kas saate integreerida valgustuse?", "a": "Jah, projekteerime ja paigaldame LED-valgustuse, spotid ja dekoratiivse valguse." },
+      { "q": "Kas töö on tolmune?", "a": "Pinguldatud laed paigaldatakse ilma müra ja tolmuta. Mööblit pole vaja välja viia." },
+      { "q": "Kas teete eritellimusi?", "a": "Jah — kumerad vormid, fototrükk, mitmetasandilised lahendused. Räägi oma ideest." }
+    ]
+  },
+  "reviews": {
+    "title": "Klientide tagasiside",
+    "subtitle": "Mida kliendid meie tööst räägivad",
+    "items": [
+      { "n": "Kristiina M.", "l": "Tallinn", "t": "Imeline tulemus! Lagi näeb välja täpselt nii, nagu unistasime. Töö oli kiire ja puhas." },
+      { "n": "Andres K.", "l": "Tartu", "t": "Professionaalne meeskond, head soovitused valgustuse osas. Soovitan kindlasti." },
+      { "n": "Marta L.", "l": "Pärnu", "t": "Hind oli aus, töö täpne ja meistrid sõbralikud. Kodu sai täiesti uue ilme." }
+    ]
+  },
+  "contact": {
+    "title": "Võta meiega ühendust",
+    "subtitle": "Vastame 24 tunni jooksul ja pakume tasuta konsultatsiooni",
+    "name": "Nimi", "phone": "Telefon", "email": "E-post", "message": "Sõnum",
+    "submit": "Saada päring", "success": "Aitäh! Võtame teiega peagi ühendust.",
+    "hours": "Tööaeg", "address": "Tallinn, Eesti"
+  },
+  "footer": {
+    "tagline": "Soojad, kaasaegsed laed sinu kodusse.",
+    "nav": "Navigatsioon", "services": "Teenused", "contact": "Kontakt",
+    "rights": "Kõik õigused kaitstud."
+  }
+}
