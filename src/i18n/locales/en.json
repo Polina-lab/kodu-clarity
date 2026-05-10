@@ -1,0 +1,109 @@
+{
+  "topbar": { "hours": "Mon–Sat 9:00–19:00", "phone": "+372 555 1234", "email": "info@kodujalagi.ee" },
+  "nav": {
+    "calculator": "Calculator", "about": "About", "advantages": "Advantages",
+    "services": "Services", "portfolio": "Portfolio", "process": "How it works",
+    "faq": "FAQ", "reviews": "Reviews", "contact": "Contact", "cta": "Free consultation"
+  },
+  "hero": {
+    "eyebrow": "A home that breathes beauty",
+    "title": "Ceilings that feel like home",
+    "subtitle": "We design and install elegant ceiling solutions that turn every room into a warm, modern, timeless space.",
+    "support": "10+ years of experience • Up to 12-year warranty • Free measurement"
+  },
+  "calc": {
+    "title": "Price calculator",
+    "subtitle": "Get an instant estimate in seconds",
+    "area": "Ceiling area (m²)",
+    "type": "Ceiling type",
+    "lamps": "Number of lamps",
+    "pipes": "Number of pipes / wiring",
+    "from": "Starting from",
+    "breakdown": "Cost breakdown",
+    "base": "Base price",
+    "lighting": "Lighting",
+    "wiring": "Pipes / wiring",
+    "order": "Order",
+    "contact": "Contact us",
+    "msg": "I'd like a quote: type {{type}}, area {{area}} m², lamps {{lamps}}, pipes {{pipes}}. Estimated from {{price}} €."
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Six categories, one promise — beautiful and lasting results",
+    "items": {
+      "stretch": { "name": "Stretch ceilings", "desc": "Smooth, glossy or matte surface that fits any space." },
+      "suspended": { "name": "Suspended ceilings", "desc": "Multi-level gypsum constructions with a modern look." },
+      "acoustic": { "name": "Acoustic ceilings", "desc": "Reduce noise and create a calm, cozy atmosphere." },
+      "lighting": { "name": "Ceiling lighting", "desc": "Integrated LED solutions — soft light exactly where you need it." },
+      "modern": { "name": "Modern ceilings", "desc": "Minimalist design, refined details and clean lines." },
+      "custom": { "name": "Custom solutions", "desc": "Your vision — our craft. Every project is unique." }
+    }
+  },
+  "advantages": {
+    "title": "Why choose Kodu ja Lagi",
+    "items": {
+      "quality": { "t": "Quality materials", "d": "Only certified materials from European manufacturers." },
+      "precise": { "t": "Precise installation", "d": "Every project measured and built to the millimeter." },
+      "cozy": { "t": "Cozy design", "d": "Solutions that match the atmosphere of your home." },
+      "fast": { "t": "Fast execution", "d": "Most jobs done in 1–3 days, with no dust or chaos." },
+      "warranty": { "t": "Long warranty", "d": "Up to 12 years on materials and installation." },
+      "experts": { "t": "Experienced specialists", "d": "10+ years and hundreds of happy clients." },
+      "clean": { "t": "Clean process", "d": "We tidy up after ourselves — you just enjoy the result." },
+      "individual": { "t": "Individual approach", "d": "Each client and space gets a unique solution." }
+    }
+  },
+  "portfolio": {
+    "title": "Our work",
+    "subtitle": "A selection of projects from recent years",
+    "filters": {
+      "all": "All", "stretch": "Stretch", "suspended": "Suspended",
+      "acoustic": "Acoustic", "lighting": "Lighting", "modern": "Modern", "custom": "Custom"
+    },
+    "msg": "I'm interested in the portfolio project: {{title}}."
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "A simple, transparent process from first message to finished ceiling",
+    "steps": [
+      { "t": "Inquiry", "d": "Send us a message or call — we reply the same day." },
+      { "t": "Consultation", "d": "We discuss your wishes and show samples and materials." },
+      { "t": "Measurement & plan", "d": "We visit, measure and prepare a precise quote." },
+      { "t": "Installation", "d": "Quick, clean work at the time we agreed." },
+      { "t": "Final result", "d": "Handover, walkthrough and warranty — you enjoy the home." }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      { "q": "How much does a new ceiling cost?", "a": "Prices start at 25 €/m². The exact cost depends on type, area and lighting. Use the calculator for an estimate." },
+      { "q": "How long does installation take?", "a": "Most apartments are done in 1–3 days. Larger projects are scheduled in advance." },
+      { "q": "What materials do you use?", "a": "Only certified PVC and fabric materials from European manufacturers (Germany, France)." },
+      { "q": "What's the warranty?", "a": "Up to 12 years on the material and 5 years on the installation." },
+      { "q": "Do ceilings need maintenance?", "a": "No. A damp cloth a couple of times a year is enough." },
+      { "q": "Can you integrate lighting?", "a": "Yes — we design and install LED lights, spots and decorative lighting." },
+      { "q": "Is the work dusty?", "a": "Stretch ceilings are installed without noise or dust. No need to move furniture." },
+      { "q": "Do you do custom work?", "a": "Yes — curved shapes, photo print, multi-level designs. Tell us your idea." }
+    ]
+  },
+  "reviews": {
+    "title": "Client reviews",
+    "subtitle": "What clients say about our work",
+    "items": [
+      { "n": "Kristiina M.", "l": "Tallinn", "t": "Amazing result! The ceiling looks exactly as we dreamed. Fast and clean work." },
+      { "n": "Andres K.", "l": "Tartu", "t": "Professional team with great lighting suggestions. Highly recommend." },
+      { "n": "Marta L.", "l": "Pärnu", "t": "Fair price, precise work, friendly craftsmen. Our home looks brand new." }
+    ]
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "We reply within 24 hours and offer a free consultation",
+    "name": "Name", "phone": "Phone", "email": "Email", "message": "Message",
+    "submit": "Get consultation", "success": "Thank you! We'll be in touch shortly.",
+    "hours": "Working hours", "address": "Tallinn, Estonia"
+  },
+  "footer": {
+    "tagline": "Warm, modern ceilings for your home.",
+    "nav": "Navigation", "services": "Services", "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
