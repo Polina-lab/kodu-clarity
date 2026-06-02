@@ -92,8 +92,10 @@
 
 @layer utilities {
   .bg-warm-gradient { background: var(--gradient-warm); }
+  .bg-hearth-gradient { background: var(--gradient-hearth); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-warm { box-shadow: var(--shadow-warm); }
+  .shadow-cozy { box-shadow: var(--shadow-cozy); }
   .fade-up {
     opacity: 0;
     transform: translateY(20px);
