@@ -12,6 +12,7 @@ import { Faq } from "@/components/landing/Faq";
 import { Reviews } from "@/components/landing/Reviews";
 import { Contact } from "@/components/landing/Contact";
 import { Footer } from "@/components/landing/Footer";
+import { ScrollToTop } from "@/components/landing/ScrollToTop";
 import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
@@ -49,6 +50,7 @@ function Index() {
           <Contact />
         </main>
         <Footer />
+        <ScrollToTop />
         <Toaster richColors position="top-center" />
       </div>
     </LeadProvider>
