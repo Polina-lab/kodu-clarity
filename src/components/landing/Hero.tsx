@@ -22,12 +22,7 @@ export function Hero() {
       />
 
       <div className="container mx-auto px-6 pt-14 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-14 items-center">
-        <div className="fade-up">
-          <img
-            src={logo}
-            alt="Kodu ja Lagi"
-            className="h-16 w-auto mb-8 opacity-90"
-          />
+        <div className="fade-up text-center lg:text-left">
           <span className="inline-block text-xs font-medium uppercase tracking-[0.22em] text-secondary mb-5">
             {t("hero.eyebrow")}
           </span>
@@ -38,6 +33,11 @@ export function Hero() {
             {t("hero.subtitle")}
           </p>
           <p className="mt-5 text-sm text-secondary font-medium">{t("hero.support")}</p>
+          <img
+            src={logo}
+            alt="Kodu ja Lagi"
+            className="h-50 w-auto mx-auto lg:mx-0 opacity-90"
+          />
         </div>
         <div className="lg:pl-8">
           <Calculator />

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { Link, useRouter, useRouterState } from "@tanstack/react-router";
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/logo2.svg";
 
 const items = ["calculator", "about", "advantages", "services", "portfolio", "process", "faq", "reviews", "contact"] as const;
 const sectionMap: Record<string, string> = {
@@ -45,10 +45,10 @@ export function Header() {
 
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-lg shadow-soft" : "bg-background"}`}>
+    <header className={`sticky top-[33px] z-50 transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-lg shadow-soft" : "bg-background"}`}>
       <div className="container mx-auto px-6 flex items-center justify-between h-20">
         <Link to="/" hash="top" className="flex items-center gap-3" aria-label="Kodu ja Lagi">
-          <img src={logo} alt="Kodu ja Lagi" className="h-10 w-auto" />
+          <img src={logo} alt="Kodu ja Lagi" className="h-15 w-auto" />
         </Link>
         <nav className="hidden lg:flex items-center gap-7">
           {items.slice(0, -1).map((k) => (

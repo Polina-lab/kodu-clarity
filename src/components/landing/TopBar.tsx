@@ -6,7 +6,7 @@ export function TopBar() {
   const langs = ["et", "en", "ru"] as const;
 
   return (
-    <div className="hidden md:block border-b border-border bg-cream">
+    <div className="hidden md:block sticky top-0 z-50 border-b border-border bg-cream">
       <div className="container mx-auto px-6 flex items-center justify-between text-xs text-muted-foreground py-2">
         <div className="flex items-center gap-6">
           <span className="inline-flex items-center gap-1.5"><Clock className="size-3.5" /> {t("topbar.hours")}</span>
