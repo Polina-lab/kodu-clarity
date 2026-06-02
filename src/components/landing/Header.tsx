@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
+import { Link, useRouter, useRouterState } from "@tanstack/react-router";
 import logo from "@/assets/logo.svg";
 import { useLead } from "@/lib/lead-context";
 
@@ -14,6 +15,8 @@ const sectionMap: Record<string, string> = {
 export function Header() {
   const { t, i18n } = useTranslation();
   const { scrollToContact } = useLead();
+  const router = useRouter();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,9 +28,20 @@ export function Header() {
   }, []);
 
   const go = (key: string) => {
-    document.getElementById(sectionMap[key])?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const id = sectionMap[key];
+    if (pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      router.navigate({ to: "/", hash: id });
+    }
     setOpen(false);
   };
+
+  const handleCta = () => {
+    if (pathname === "/") scrollToContact();
+    else router.navigate({ to: "/", hash: "contact" });
+  };
+
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-lg shadow-soft" : "bg-background"}`}>
