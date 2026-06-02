@@ -104,6 +104,47 @@
   "footer": {
     "tagline": "Warm, modern ceilings for your home.",
     "nav": "Navigation", "services": "Services", "contact": "Contact",
+    "legal": "Legal", "privacy": "Privacy Policy",
+    "cookies": "Cookies", "terms": "Terms & Conditions",
     "rights": "All rights reserved."
+  },
+  "legal": {
+    "back": "Back to home",
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "Last updated: January 2025",
+      "sections": [
+        { "h": "1. General", "p": "This privacy policy describes how Kodu ja Lagi collects, uses and protects your personal data when you use our website and services. We process data in line with the General Data Protection Regulation (GDPR)." },
+        { "h": "2. Data we collect", "p": "We collect data you voluntarily share with us: name, phone, email, message and information about the service requested. We also collect technical data (IP address, browser, pages visited) for analytics and security." },
+        { "h": "3. How we use your data", "p": "We use your data to reply to inquiries, prepare quotes, deliver services and meet legal obligations. We never sell or share your data with third parties for marketing." },
+        { "h": "4. Data retention", "p": "We keep personal data only as long as needed to provide the service or meet legal obligations. Afterwards data is securely deleted." },
+        { "h": "5. Your rights", "p": "You have the right to access, correct, delete or restrict the processing of your data, and to withdraw consent. To exercise these rights, contact us at info@kodujalagi.ee." },
+        { "h": "6. Contact", "p": "For privacy-related questions: info@kodujalagi.ee or +372 555 1234." }
+      ]
+    },
+    "cookies": {
+      "title": "Cookies",
+      "updated": "Last updated: January 2025",
+      "sections": [
+        { "h": "1. What are cookies", "p": "Cookies are small text files saved on your device by a website so that the site works better and remembers your preferences." },
+        { "h": "2. Cookies we use", "p": "Essential cookies: required for the site to work (e.g. selected language).\nAnalytics cookies: help us understand how visitors use the site.\nFunctional cookies: remember your choices (e.g. calculator inputs)." },
+        { "h": "3. Managing cookies", "p": "You can disable or delete cookies in your browser settings. Note that disabling essential cookies may affect how the site works." },
+        { "h": "4. Third-party cookies", "p": "We may use services such as Google Analytics that set their own cookies. Their own privacy policies apply." },
+        { "h": "5. Contact", "p": "For questions write to: info@kodujalagi.ee." }
+      ]
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "updated": "Last updated: January 2025",
+      "sections": [
+        { "h": "1. General", "p": "These terms govern your use of the Kodu ja Lagi website and services. By using the site, you agree to them." },
+        { "h": "2. Services", "p": "We design and install stretch, suspended and acoustic ceilings and ceiling lighting. Information and calculator results on the site are estimates only — the final price is confirmed after on-site measurement." },
+        { "h": "3. Inquiries and quotes", "p": "Inquiries submitted through the website do not create a binding contract. A contract is concluded separately, once the terms have been agreed." },
+        { "h": "4. Liability", "p": "We make reasonable efforts to keep website information accurate, but cannot guarantee it is error-free. We are not liable for indirect damage arising from use of the site." },
+        { "h": "5. Intellectual property", "p": "All site content, design, logos and photos belong to Kodu ja Lagi. Use without permission is prohibited." },
+        { "h": "6. Changes", "p": "We reserve the right to change these terms at any time. Changes take effect when published on the site." },
+        { "h": "7. Contact", "p": "info@kodujalagi.ee • +372 555 1234" }
+      ]
+    }
   }
 }
