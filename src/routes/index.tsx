@@ -50,6 +50,7 @@ function Index() {
           <Contact />
         </main>
         <Footer />
+        <ScrollToTop />
         <Toaster richColors position="top-center" />
       </div>
     </LeadProvider>
