@@ -104,6 +104,47 @@
   "footer": {
     "tagline": "Soojad, kaasaegsed laed sinu kodusse.",
     "nav": "Navigatsioon", "services": "Teenused", "contact": "Kontakt",
+    "legal": "Õiguslik", "privacy": "Privaatsuspoliitika",
+    "cookies": "Küpsised", "terms": "Kasutustingimused",
     "rights": "Kõik õigused kaitstud."
+  },
+  "legal": {
+    "back": "Tagasi avalehele",
+    "privacy": {
+      "title": "Privaatsuspoliitika",
+      "updated": "Viimati uuendatud: jaanuar 2025",
+      "sections": [
+        { "h": "1. Üldsätted", "p": "Käesolev privaatsuspoliitika kirjeldab, kuidas Kodu ja Lagi kogub, kasutab ja kaitseb teie isikuandmeid, kui kasutate meie veebilehte ja teenuseid. Töötleme andmeid kooskõlas isikuandmete kaitse üldmäärusega (GDPR)." },
+        { "h": "2. Milliseid andmeid kogume", "p": "Kogume andmeid, mille esitate meile vabatahtlikult: nimi, telefon, e-post, sõnumi sisu ja info tellitud teenuse kohta. Lisaks kogutakse tehnilist infot (IP-aadress, brauser, külastatud lehed) analüüsi ja turvalisuse eesmärgil." },
+        { "h": "3. Andmete kasutamine", "p": "Kasutame teie andmeid päringutele vastamiseks, pakkumiste koostamiseks, teenuste osutamiseks ja seadusest tulenevate kohustuste täitmiseks. Me ei müü ega anna teie andmeid kolmandatele isikutele turunduslikel eesmärkidel." },
+        { "h": "4. Andmete säilitamine", "p": "Säilitame isikuandmeid nii kaua, kui see on vajalik teenuse osutamiseks või seadusest tulenevate kohustuste täitmiseks. Pärast vajaduse lõppemist kustutame andmed turvaliselt." },
+        { "h": "5. Teie õigused", "p": "Teil on õigus tutvuda enda andmetega, neid parandada, kustutada, töötlemist piirata ja oma nõusolek tagasi võtta. Päringute esitamiseks võtke meiega ühendust: info@kodujalagi.ee." },
+        { "h": "6. Kontakt", "p": "Privaatsuspoliitikat puudutavate küsimustega pöörduge: info@kodujalagi.ee või +372 555 1234." }
+      ]
+    },
+    "cookies": {
+      "title": "Küpsised",
+      "updated": "Viimati uuendatud: jaanuar 2025",
+      "sections": [
+        { "h": "1. Mis on küpsised", "p": "Küpsised on väikesed tekstifailid, mille veebileht salvestab teie seadmesse, et veebileht paremini toimiks ja meelde jätaks teie eelistused." },
+        { "h": "2. Milliseid küpsiseid kasutame", "p": "Hädavajalikud küpsised: vajalikud veebilehe toimimiseks (nt valitud keel).\nAnalüütika küpsised: aitavad meil mõista, kuidas külastajad lehte kasutavad.\nFunktsionaalsed küpsised: jätavad meelde teie valikud (nt kalkulaatori sisendid)." },
+        { "h": "3. Küpsiste haldamine", "p": "Saate oma brauseri seadetes küpsised keelata või kustutada. Pange tähele, et hädavajalike küpsiste keelamine võib mõjutada veebilehe toimimist." },
+        { "h": "4. Kolmandate osapoolte küpsised", "p": "Võime kasutada Google Analyticsi laadseid teenuseid, mis seavad oma küpsiseid. Nende eraldi privaatsuspoliitika kehtib." },
+        { "h": "5. Kontakt", "p": "Küsimuste korral kirjutage: info@kodujalagi.ee." }
+      ]
+    },
+    "terms": {
+      "title": "Kasutustingimused",
+      "updated": "Viimati uuendatud: jaanuar 2025",
+      "sections": [
+        { "h": "1. Üldsätted", "p": "Käesolevad kasutustingimused reguleerivad Kodu ja Lagi veebilehe ning teenuste kasutamist. Veebilehte kasutades nõustute nende tingimustega." },
+        { "h": "2. Teenuste kirjeldus", "p": "Pakume pinguldatud, ripp- ja akustiliste lagede ning lae-valgustuse projekteerimist ja paigaldust. Veebilehel olev info ja kalkulaator on esialgne — lõplik hind kinnitatakse pärast objekti mõõdistamist." },
+        { "h": "3. Päringud ja pakkumised", "p": "Veebilehe kaudu saadetud päringud ei loo siduvat lepingut. Leping sõlmitakse eraldi, pärast tingimuste kokkuleppimist." },
+        { "h": "4. Vastutus", "p": "Teeme kõik mõistliku, et veebilehel olev info oleks täpne, kuid ei garanteeri selle täielikku veatust. Me ei vastuta kaudse kahju eest, mis tuleneb veebilehe kasutamisest." },
+        { "h": "5. Intellektuaalomand", "p": "Veebilehe sisu, kujundus, logod ja fotod kuuluvad Kodu ja Lagile. Sisu kasutamine ilma loata on keelatud." },
+        { "h": "6. Muudatused", "p": "Jätame endale õiguse kasutustingimusi igal ajal muuta. Muudatused jõustuvad nende avaldamisega veebilehel." },
+        { "h": "7. Kontakt", "p": "info@kodujalagi.ee • +372 555 1234" }
+      ]
+    }
   }
 }
