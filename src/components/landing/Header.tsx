@@ -46,9 +46,9 @@ export function Header() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-lg shadow-soft" : "bg-background"}`}>
       <div className="container mx-auto px-6 flex items-center justify-between h-20">
-        <a href="#top" className="flex items-center gap-3" aria-label="Kodu ja Lagi">
+        <Link to="/" hash="top" className="flex items-center gap-3" aria-label="Kodu ja Lagi">
           <img src={logo} alt="Kodu ja Lagi" className="h-10 w-auto" />
-        </a>
+        </Link>
         <nav className="hidden lg:flex items-center gap-7">
           {items.slice(0, -1).map((k) => (
             <button key={k} onClick={() => go(k)} className="text-sm text-foreground/80 hover:text-primary transition-colors">
@@ -57,7 +57,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <button onClick={() => scrollToContact()} className="hidden sm:inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-medium hover:bg-secondary transition-colors shadow-soft">
+          <button onClick={handleCta} className="hidden sm:inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-medium hover:bg-secondary transition-colors shadow-soft">
             {t("nav.cta")}
           </button>
           <button onClick={() => setOpen(!open)} className="lg:hidden p-2" aria-label="menu">
