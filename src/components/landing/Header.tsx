@@ -36,8 +36,11 @@ export function Header() {
   };
 
   const handleCta = () => {
-    if (pathname === "/") scrollToContact();
-    else router.navigate({ to: "/", hash: "contact" });
+    if (pathname === "/") {
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      router.navigate({ to: "/", hash: "contact" });
+    }
   };
 
 
