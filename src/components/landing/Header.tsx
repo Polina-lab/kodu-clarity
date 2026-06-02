@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { Link, useRouter, useRouterState } from "@tanstack/react-router";
 import logo from "@/assets/logo.svg";
-import { useLead } from "@/lib/lead-context";
 
 const items = ["calculator", "about", "advantages", "services", "portfolio", "process", "faq", "reviews", "contact"] as const;
 const sectionMap: Record<string, string> = {
@@ -14,7 +13,6 @@ const sectionMap: Record<string, string> = {
 
 export function Header() {
   const { t, i18n } = useTranslation();
-  const { scrollToContact } = useLead();
   const router = useRouter();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [open, setOpen] = useState(false);
