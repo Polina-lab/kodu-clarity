@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
-import { Link, useRouter, useRouterState } from "@tanstack/react-router";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo2.svg";
 
 const items = ["calculator", "about", "advantages", "services", "portfolio", "process", "faq", "reviews", "contact"] as const;
@@ -13,8 +13,8 @@ const sectionMap: Record<string, string> = {
 
 export function Header() {
   const { t, i18n } = useTranslation();
-  const router = useRouter();
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,7 +30,7 @@ export function Header() {
     if (pathname === "/") {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      router.navigate({ to: "/", hash: id });
+      navigate(`/#${id}`);
     }
     setOpen(false);
   };
@@ -39,18 +39,17 @@ export function Header() {
     if (pathname === "/") {
       document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      router.navigate({ to: "/", hash: "contact" });
+      navigate("/#contact");
     }
   };
 
-
   return (
-    <header className={`sticky top-[33px] z-50 transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-lg shadow-soft" : "bg-background"}`}>
-      <div className="container mx-auto px-6 flex items-center justify-between h-20">
-        <Link to="/" hash="top" className="flex items-center gap-3" aria-label="Kodu ja Lagi">
-          <img src={logo} alt="Kodu ja Lagi" className="h-15 w-auto" />
+    <header className={`sticky top-0 md:top-[33px] z-40 transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-lg shadow-soft" : "bg-background"}`}>
+      <div className="container mx-auto px-6 flex items-center justify-between h-16 md:h-18">
+        <Link to="/" className="flex items-center gap-3" aria-label="Kodu ja Lagi">
+          <img src={logo} alt="Kodu ja Lagi" className="h-12 md:h-14 w-auto" />
         </Link>
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-6">
           {items.slice(0, -1).map((k) => (
             <button key={k} onClick={() => go(k)} className="text-sm text-foreground/80 hover:text-primary transition-colors">
               {t(`nav.${k}`)}
