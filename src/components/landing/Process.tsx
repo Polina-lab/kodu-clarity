@@ -3,7 +3,8 @@ import { SectionTitle } from "./Services";
 
 export function Process() {
   const { t } = useTranslation();
-  const steps = t("process.steps", { returnObjects: true }) as { t: string; d: string }[];
+  const raw = t("process.steps", { returnObjects: true }) as unknown;
+  const steps = (Array.isArray(raw) ? raw : []) as { t: string; d: string }[];
   return (
     <section id="process" className="py-24 bg-cream">
       <div className="container mx-auto px-6">
