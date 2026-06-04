@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { TopBar } from "@/components/landing/TopBar";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
