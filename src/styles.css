@@ -34,7 +34,7 @@
   --color-cream: var(--cream);
   --color-sand: var(--sand);
   --color-beige: var(--beige);
-  --font-display: "Oswald", sans-serif;
+  --font-display: "Oswald", "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --shadow-soft: 0 8px 28px -14px color-mix(in oklab, var(--primary) 14%, transparent);
   --shadow-warm: 0 24px 60px -28px color-mix(in oklab, var(--primary) 22%, transparent);
@@ -87,7 +87,7 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 }
 
 @font-face {
@@ -100,9 +100,18 @@
 
 @font-face {
   font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/Oswald-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
   font-weight: 700;
   font-style: normal;
   src: url("./fonts/Oswald-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @layer utilities {
