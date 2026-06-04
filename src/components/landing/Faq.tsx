@@ -4,7 +4,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export function Faq() {
   const { t } = useTranslation();
-  const items = t("faq.items", { returnObjects: true }) as { q: string; a: string }[];
+  const raw = t("faq.items", { returnObjects: true }) as unknown;
+  const items = (Array.isArray(raw) ? raw : []) as { q: string; a: string }[];
   return (
     <section id="faq" className="py-24 bg-background">
       <div className="container mx-auto px-6 max-w-4xl">
