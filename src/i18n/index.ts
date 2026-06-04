@@ -17,6 +17,11 @@ if (!i18n.isInitialized) {
       },
       fallbackLng: "et",
       supportedLngs: ["et", "en", "ru"],
+      load: "languageOnly",
+      nonExplicitSupportedLngs: true,
+      initImmediate: false,
+      returnObjects: true,
+      returnNull: false,
       interpolation: { escapeValue: false },
       detection: { order: ["localStorage", "navigator"], caches: ["localStorage"] },
     });
