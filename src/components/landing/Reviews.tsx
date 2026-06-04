@@ -4,7 +4,8 @@ import { SectionTitle } from "./Services";
 
 export function Reviews() {
   const { t } = useTranslation();
-  const items = t("reviews.items", { returnObjects: true }) as { n: string; l: string; t: string }[];
+  const raw = t("reviews.items", { returnObjects: true }) as unknown;
+  const items = (Array.isArray(raw) ? raw : []) as { n: string; l: string; t: string }[];
   return (
     <section id="reviews" className="py-24 bg-cream">
       <div className="container mx-auto px-6">
