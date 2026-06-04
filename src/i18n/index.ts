@@ -6,8 +6,6 @@ import en from "./locales/en.json";
 import ru from "./locales/ru.json";
 
 if (!i18n.isInitialized) {
-  // @ts-expect-error initImmediate is valid runtime option
-  
   i18n
     .use(LanguageDetector)
     .use(initReactI18next)
@@ -21,12 +19,13 @@ if (!i18n.isInitialized) {
       supportedLngs: ["et", "en", "ru"],
       load: "languageOnly",
       nonExplicitSupportedLngs: true,
-      initImmediate: false,
       returnObjects: true,
       returnNull: false,
       interpolation: { escapeValue: false },
       detection: { order: ["localStorage", "navigator"], caches: ["localStorage"] },
-    });
+      react: { useSuspense: false },
+      initImmediate: false,
+    } as never);
 }
 
 export default i18n;
