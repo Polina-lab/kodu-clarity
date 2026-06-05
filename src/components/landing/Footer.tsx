@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.svg";
+import { changeAppLanguage, getActiveLanguage, supportedLanguages } from "@/i18n";
 
 export function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const activeLanguage = getActiveLanguage();
   const navItems = ["services", "portfolio", "process", "faq", "reviews", "contact"] as const;
   const serviceItems = ["stretch", "suspended", "acoustic", "lighting", "modern", "custom"] as const;
   const go = (id: string) => {
@@ -22,10 +24,10 @@ export function Footer() {
           <img src={logo} alt="Kodu ja Lagi" className="h-12 w-auto brightness-0 invert opacity-90" />
           <p className="mt-4 text-primary-foreground/70 max-w-sm">{t("footer.tagline")}</p>
           <div className="mt-5 flex gap-2">
-            {(["et", "en", "ru"] as const).map((l) => (
-              <button key={l} onClick={() => i18n.changeLanguage(l)}
+            {supportedLanguages.map((l) => (
+              <button key={l} type="button" onClick={() => void changeAppLanguage(l)} aria-pressed={activeLanguage === l}
                 className={`px-3 py-1 rounded-md text-xs uppercase font-medium transition-colors ${
-                  i18n.resolvedLanguage === l ? "bg-primary-foreground text-primary" : "bg-primary-foreground/10 hover:bg-primary-foreground/20"
+                  activeLanguage === l ? "bg-primary-foreground text-primary" : "bg-primary-foreground/10 hover:bg-primary-foreground/20"
                 }`}>{l}</button>
             ))}
           </div>
