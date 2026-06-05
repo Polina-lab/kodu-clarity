@@ -108,6 +108,17 @@
     "cookies": "Küpsised", "terms": "Kasutustingimused",
     "rights": "Kõik õigused kaitstud."
   },
+  "meta": {
+    "home": "Kodu ja Lagi — Soojad, kaasaegsed laed sinu kodusse",
+    "privacy": "Privaatsuspoliitika — Kodu ja Lagi",
+    "cookies": "Küpsised — Kodu ja Lagi",
+    "terms": "Kasutustingimused — Kodu ja Lagi"
+  },
+  "notFound": {
+    "title": "Lehte ei leitud",
+    "description": "Otsitud lehte ei ole olemas.",
+    "home": "Avalehele"
+  },
   "legal": {
     "back": "Tagasi avalehele",
     "privacy": {

@@ -108,6 +108,17 @@
     "cookies": "Файлы cookie", "terms": "Условия использования",
     "rights": "Все права защищены."
   },
+  "meta": {
+    "home": "Kodu ja Lagi — Тёплые современные потолки для вашего дома",
+    "privacy": "Политика конфиденциальности — Kodu ja Lagi",
+    "cookies": "Файлы cookie — Kodu ja Lagi",
+    "terms": "Условия использования — Kodu ja Lagi"
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Страница, которую вы ищете, не существует.",
+    "home": "На главную"
+  },
   "legal": {
     "back": "Назад на главную",
     "privacy": {

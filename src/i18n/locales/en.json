@@ -108,6 +108,17 @@
     "cookies": "Cookies", "terms": "Terms & Conditions",
     "rights": "All rights reserved."
   },
+  "meta": {
+    "home": "Kodu ja Lagi — Warm, modern ceilings for your home",
+    "privacy": "Privacy Policy — Kodu ja Lagi",
+    "cookies": "Cookies — Kodu ja Lagi",
+    "terms": "Terms & Conditions — Kodu ja Lagi"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist.",
+    "home": "Go home"
+  },
   "legal": {
     "back": "Back to home",
     "privacy": {
