@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Cookies from "./pages/Cookies";
@@ -22,6 +23,9 @@ function ScrollToHash() {
 }
 
 export default function App() {
+  const { ready } = useTranslation();
+  if (!ready) return null;
+
   return (
     <>
       <ScrollToHash />
