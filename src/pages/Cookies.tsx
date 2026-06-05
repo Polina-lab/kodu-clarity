@@ -1,9 +1,13 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { LegalPage } from "@/components/landing/LegalPage";
 
 export default function Cookies() {
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
-    document.title = "Küpsised — Kodu ja Lagi";
-  }, []);
+    document.title = t("meta.cookies");
+  }, [t, i18n.resolvedLanguage]);
+
   return <LegalPage slug="cookies" />;
 }

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo2.svg";
+import { changeAppLanguage, getActiveLanguage, supportedLanguages } from "@/i18n";
 
 const items = ["calculator", "about", "advantages", "services", "portfolio", "process", "faq", "reviews", "contact"] as const;
 const sectionMap: Record<string, string> = {
@@ -12,11 +13,12 @@ const sectionMap: Record<string, string> = {
 };
 
 export function Header() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const activeLanguage = getActiveLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -74,8 +76,8 @@ export function Header() {
               </button>
             ))}
             <div className="flex gap-2 pt-3 border-t border-border mt-2">
-              {(["et", "en", "ru"] as const).map((l) => (
-                <button key={l} onClick={() => i18n.changeLanguage(l)} className={`px-3 py-1 rounded-md text-xs uppercase font-medium ${i18n.resolvedLanguage === l ? "bg-primary text-primary-foreground" : "bg-sand"}`}>{l}</button>
+              {supportedLanguages.map((l) => (
+                <button key={l} type="button" onClick={() => void changeAppLanguage(l)} aria-pressed={activeLanguage === l} className={`px-3 py-1 rounded-md text-xs uppercase font-medium ${activeLanguage === l ? "bg-primary text-primary-foreground" : "bg-sand"}`}>{l}</button>
               ))}
             </div>
           </div>

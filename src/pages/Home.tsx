@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { LeadProvider } from "@/lib/lead-context";
 import { TopBar } from "@/components/landing/TopBar";
 import { Header } from "@/components/landing/Header";
@@ -15,9 +16,12 @@ import { ScrollToTop } from "@/components/landing/ScrollToTop";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
-    document.title = "Kodu ja Lagi — Soojad, kaasaegsed laed sinu kodusse";
-  }, []);
+    document.title = t("meta.home");
+  }, [t, i18n.resolvedLanguage]);
+
   return (
     <LeadProvider>
       <div className="min-h-screen bg-background">

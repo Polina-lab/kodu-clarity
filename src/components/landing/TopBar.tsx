@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Phone, Mail, Clock } from "lucide-react";
+import { changeAppLanguage, getActiveLanguage, supportedLanguages } from "@/i18n";
 
 export function TopBar() {
-  const { t, i18n } = useTranslation();
-  const langs = ["et", "en", "ru"] as const;
+  const { t } = useTranslation();
+  const activeLanguage = getActiveLanguage();
 
   return (
     <div className="hidden md:block sticky top-0 z-50 border-b border-border bg-cream">
@@ -14,12 +15,14 @@ export function TopBar() {
           <a href={`mailto:${t("topbar.email")}`} className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"><Mail className="size-3.5" /> {t("topbar.email")}</a>
         </div>
         <div className="flex items-center gap-1">
-          {langs.map((l) => (
+          {supportedLanguages.map((l) => (
             <button
               key={l}
-              onClick={() => i18n.changeLanguage(l)}
+              type="button"
+              onClick={() => void changeAppLanguage(l)}
+              aria-pressed={activeLanguage === l}
               className={`px-2 py-1 rounded-md text-[11px] font-medium uppercase tracking-wider transition-colors ${
-                i18n.resolvedLanguage === l ? "bg-primary text-primary-foreground" : "hover:bg-sand"
+                activeLanguage === l ? "bg-primary text-primary-foreground" : "hover:bg-sand"
               }`}
             >
               {l}

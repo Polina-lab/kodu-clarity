@@ -59,6 +59,13 @@
       "all": "Kõik", "stretch": "Pinguldatud", "suspended": "Ripplaed",
       "acoustic": "Akustilised", "lighting": "Valgustusega", "modern": "Kaasaegsed", "custom": "Eritellimus"
     },
+    "projects": {
+      "1": "Läikiv pinglagi — Tallinna korter", "2": "Tähistaevaga magamistoa lagi", "3": "Matt pinglagi pere elutoas",
+      "4": "Mitmetasandiline ripplagi", "5": "Kassettlagi köögis", "6": "Gipslagi elutoas",
+      "7": "Puidust akustiline kodukontor", "8": "Akustilised paneelid — stuudio", "9": "Integreeritud LED-valgustus söögitoas",
+      "10": "Lineaarne laevalgustus", "11": "Kaasaegne kassettlae disain", "12": "Minimalistlik korterilagi",
+      "13": "Kumer puidust lugemisnurk", "14": "Eritellimusel mitmetasandiline lagi", "15": "Eritellimusel kaarlagi"
+    },
     "msg": "Mind huvitab portfoolio projekt: {{title}}."
   },
   "process": {
@@ -99,6 +106,7 @@
     "subtitle": "Vastame 24 tunni jooksul ja pakume tasuta konsultatsiooni",
     "name": "Nimi", "phone": "Telefon", "email": "E-post", "message": "Sõnum",
     "submit": "Saada päring", "success": "Aitäh! Võtame teiega peagi ühendust.",
+    "invalid": "Palun kontrolli vormivälju ja proovi uuesti.",
     "hours": "Tööaeg", "address": "Tallinn, Eesti"
   },
   "footer": {
@@ -107,6 +115,17 @@
     "legal": "Õiguslik", "privacy": "Privaatsuspoliitika",
     "cookies": "Küpsised", "terms": "Kasutustingimused",
     "rights": "Kõik õigused kaitstud."
+  },
+  "meta": {
+    "home": "Kodu ja Lagi — Soojad, kaasaegsed laed sinu kodusse",
+    "privacy": "Privaatsuspoliitika — Kodu ja Lagi",
+    "cookies": "Küpsised — Kodu ja Lagi",
+    "terms": "Kasutustingimused — Kodu ja Lagi"
+  },
+  "notFound": {
+    "title": "Lehte ei leitud",
+    "description": "Otsitud lehte ei ole olemas.",
+    "home": "Avalehele"
   },
   "legal": {
     "back": "Tagasi avalehele",

@@ -59,6 +59,13 @@
       "all": "All", "stretch": "Stretch", "suspended": "Suspended",
       "acoustic": "Acoustic", "lighting": "Lighting", "modern": "Modern", "custom": "Custom"
     },
+    "projects": {
+      "1": "Glossy stretch ceiling — Tallinn apartment", "2": "Starlight bedroom ceiling", "3": "Matte stretch in family living room",
+      "4": "Multi-level suspended ceiling", "5": "Coffered kitchen ceiling", "6": "Gypsum living room design",
+      "7": "Wooden acoustic home office", "8": "Acoustic panels — studio", "9": "Integrated LED dining room",
+      "10": "Linear ceiling lighting", "11": "Modern coffer design", "12": "Minimalist apartment ceiling",
+      "13": "Curved wood reading nook", "14": "Custom multi-level ceiling", "15": "Bespoke arched ceiling"
+    },
     "msg": "I'm interested in the portfolio project: {{title}}."
   },
   "process": {
@@ -99,6 +106,7 @@
     "subtitle": "We reply within 24 hours and offer a free consultation",
     "name": "Name", "phone": "Phone", "email": "Email", "message": "Message",
     "submit": "Get consultation", "success": "Thank you! We'll be in touch shortly.",
+    "invalid": "Please check the form fields and try again.",
     "hours": "Working hours", "address": "Tallinn, Estonia"
   },
   "footer": {
@@ -107,6 +115,17 @@
     "legal": "Legal", "privacy": "Privacy Policy",
     "cookies": "Cookies", "terms": "Terms & Conditions",
     "rights": "All rights reserved."
+  },
+  "meta": {
+    "home": "Kodu ja Lagi — Warm, modern ceilings for your home",
+    "privacy": "Privacy Policy — Kodu ja Lagi",
+    "cookies": "Cookies — Kodu ja Lagi",
+    "terms": "Terms & Conditions — Kodu ja Lagi"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist.",
+    "home": "Go home"
   },
   "legal": {
     "back": "Back to home",

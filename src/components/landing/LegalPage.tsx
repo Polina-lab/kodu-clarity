@@ -12,7 +12,8 @@ type Section = { h: string; p: string };
 
 export function LegalPage({ slug }: { slug: "privacy" | "cookies" | "terms" }) {
   const { t } = useTranslation();
-  const sections = t(`legal.${slug}.sections`, { returnObjects: true }) as Section[];
+  const rawSections = t(`legal.${slug}.sections`, { returnObjects: true }) as unknown;
+  const sections = (Array.isArray(rawSections) ? rawSections : []) as Section[];
 
   return (
     <LeadProvider>
@@ -34,13 +35,12 @@ export function LegalPage({ slug }: { slug: "privacy" | "cookies" | "terms" }) {
             <p className="mt-3 text-sm text-muted-foreground">{t(`legal.${slug}.updated`)}</p>
 
             <div className="mt-10 space-y-8">
-              {Array.isArray(sections) &&
-                sections.map((s, i) => (
-                  <section key={i} className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-soft">
-                    <h2 className="text-2xl text-foreground mb-3">{s.h}</h2>
-                    <p className="text-foreground/80 leading-relaxed whitespace-pre-line">{s.p}</p>
-                  </section>
-                ))}
+              {sections.map((s, i) => (
+                <section key={i} className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-soft">
+                  <h2 className="text-2xl text-foreground mb-3">{s.h}</h2>
+                  <p className="text-foreground/80 leading-relaxed whitespace-pre-line">{s.p}</p>
+                </section>
+              ))}
             </div>
           </article>
         </main>
