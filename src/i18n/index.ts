@@ -20,7 +20,7 @@ export function getActiveLanguage(): SupportedLanguage {
 export async function changeAppLanguage(language: SupportedLanguage) {
   const next = normalizeLanguage(language) ?? "et";
   if (typeof window !== "undefined") window.localStorage.setItem("i18nextLng", next);
-  document.documentElement.lang = next;
+  if (typeof document !== "undefined") document.documentElement.lang = next;
   await i18n.changeLanguage(next);
 }
 
@@ -55,10 +55,10 @@ if (!i18n.isInitialized) {
 
 i18n.on("languageChanged", (language) => {
   const active = normalizeLanguage(language) ?? "et";
-  document.documentElement.lang = active;
+  if (typeof document !== "undefined") document.documentElement.lang = active;
   if (typeof window !== "undefined") window.localStorage.setItem("i18nextLng", active);
 });
 
-document.documentElement.lang = getActiveLanguage();
+if (typeof document !== "undefined") document.documentElement.lang = getActiveLanguage();
 
 export default i18n;
