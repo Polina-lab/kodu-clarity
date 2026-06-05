@@ -59,6 +59,13 @@
       "all": "Kõik", "stretch": "Pinguldatud", "suspended": "Ripplaed",
       "acoustic": "Akustilised", "lighting": "Valgustusega", "modern": "Kaasaegsed", "custom": "Eritellimus"
     },
+    "projects": {
+      "1": "Läikiv pinglagi — Tallinna korter", "2": "Tähistaevaga magamistoa lagi", "3": "Matt pinglagi pere elutoas",
+      "4": "Mitmetasandiline ripplagi", "5": "Kassettlagi köögis", "6": "Gipslagi elutoas",
+      "7": "Puidust akustiline kodukontor", "8": "Akustilised paneelid — stuudio", "9": "Integreeritud LED-valgustus söögitoas",
+      "10": "Lineaarne laevalgustus", "11": "Kaasaegne kassettlae disain", "12": "Minimalistlik korterilagi",
+      "13": "Kumer puidust lugemisnurk", "14": "Eritellimusel mitmetasandiline lagi", "15": "Eritellimusel kaarlagi"
+    },
     "msg": "Mind huvitab portfoolio projekt: {{title}}."
   },
   "process": {

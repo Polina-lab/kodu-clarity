@@ -29,19 +29,22 @@ export function Portfolio() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-          {items.map((p) => (
-            <button key={p.id} onClick={() => scrollToContact(t("portfolio.msg", { title: p.title }))}
+          {items.map((p) => {
+            const title = t(`portfolio.projects.${p.id}`, { defaultValue: p.title });
+            return (
+            <button key={p.id} onClick={() => scrollToContact(t("portfolio.msg", { title }))}
               className="group text-left bg-card rounded-2xl overflow-hidden border border-border hover:shadow-warm transition-all duration-500 hover:-translate-y-1">
               <div className="aspect-[4/3] overflow-hidden">
-                <img src={p.img} alt={p.title} loading="lazy" width={1024} height={768}
+                <img src={p.img} alt={title} loading="lazy" width={1024} height={768}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-5">
                 <span className="text-[10px] uppercase tracking-widest text-secondary">{t(`portfolio.filters.${p.category}`)}</span>
-                <h3 className="text-base text-foreground mt-1">{p.title}</h3>
+                <h3 className="text-base text-foreground mt-1">{title}</h3>
               </div>
             </button>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
