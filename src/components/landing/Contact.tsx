@@ -32,7 +32,7 @@ export function Contact() {
     };
     const r = schema.safeParse(data);
     if (!r.success) {
-      toast.error(r.error.issues[0]?.message ?? "Invalid input");
+      toast.error(t("contact.invalid"));
       return;
     }
     toast.success(t("contact.success"));

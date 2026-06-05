@@ -106,6 +106,7 @@
     "subtitle": "We reply within 24 hours and offer a free consultation",
     "name": "Name", "phone": "Phone", "email": "Email", "message": "Message",
     "submit": "Get consultation", "success": "Thank you! We'll be in touch shortly.",
+    "invalid": "Please check the form fields and try again.",
     "hours": "Working hours", "address": "Tallinn, Estonia"
   },
   "footer": {

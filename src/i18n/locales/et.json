@@ -106,6 +106,7 @@
     "subtitle": "Vastame 24 tunni jooksul ja pakume tasuta konsultatsiooni",
     "name": "Nimi", "phone": "Telefon", "email": "E-post", "message": "Sõnum",
     "submit": "Saada päring", "success": "Aitäh! Võtame teiega peagi ühendust.",
+    "invalid": "Palun kontrolli vormivälju ja proovi uuesti.",
     "hours": "Tööaeg", "address": "Tallinn, Eesti"
   },
   "footer": {
