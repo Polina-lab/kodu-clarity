@@ -36,21 +36,21 @@
   --color-beige: var(--beige);
   --font-display: "Oswald", "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
-  --shadow-soft: 0 8px 28px -14px color-mix(in oklab, var(--primary) 14%, transparent);
-  --shadow-warm: 0 24px 60px -28px color-mix(in oklab, var(--primary) 22%, transparent);
-  --shadow-cozy: 0 2px 6px -2px color-mix(in oklab, var(--primary) 10%, transparent), 0 18px 40px -22px color-mix(in oklab, var(--primary) 16%, transparent);
-  --gradient-warm: radial-gradient(120% 80% at 80% 0%, oklch(0.96 0.028 70) 0%, oklch(0.965 0.022 72) 45%, oklch(0.97 0.018 74) 100%);
-  --gradient-hearth: linear-gradient(180deg, oklch(0.97 0.022 72) 0%, oklch(0.955 0.028 68) 100%);
+  --shadow-soft: 0 6px 22px -14px color-mix(in oklab, var(--primary) 12%, transparent), 0 1px 2px -1px color-mix(in oklab, var(--primary) 8%, transparent);
+  --shadow-warm: 0 30px 70px -34px color-mix(in oklab, var(--primary) 20%, transparent), 0 2px 6px -2px color-mix(in oklab, var(--primary) 8%, transparent);
+  --shadow-cozy: 0 2px 6px -2px color-mix(in oklab, var(--primary) 10%, transparent), 0 22px 46px -24px color-mix(in oklab, var(--primary) 14%, transparent);
+  --gradient-warm: radial-gradient(120% 80% at 80% 0%, oklch(0.965 0.032 72) 0%, oklch(0.968 0.026 74) 45%, oklch(0.973 0.02 76) 100%);
+  --gradient-hearth: linear-gradient(180deg, oklch(0.972 0.026 74) 0%, oklch(0.952 0.034 68) 100%);
 }
 
 :root {
-  --radius: 1rem;
-  /* warmer cozy beige base */
-  --background: oklch(0.972 0.018 74);
-  --foreground: oklch(0.24 0.035 38);
-  --cream: oklch(0.978 0.022 74);
-  --sand: oklch(0.935 0.034 70);
-  --beige: oklch(0.895 0.04 66);
+  --radius: 1.25rem;
+  /* subtly warmer cream base */
+  --background: oklch(0.975 0.022 76);
+  --foreground: oklch(0.24 0.032 40);
+  --cream: oklch(0.982 0.024 76);
+  --sand: oklch(0.938 0.036 72);
+  --beige: oklch(0.898 0.042 68);
 
   --card: oklch(0.985 0.014 74);
   --card-foreground: oklch(0.24 0.035 38);
@@ -115,6 +115,13 @@
 }
 
 @layer utilities {
+  .bg-linen {
+    background-color: var(--color-cream);
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in oklab, var(--foreground) 3%, transparent) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(0deg, color-mix(in oklab, var(--foreground) 2%, transparent) 0 1px, transparent 1px 3px);
+    background-size: 3px 3px, 3px 3px;
+  }
   .bg-warm-gradient { background: var(--gradient-warm); }
   .bg-hearth-gradient { background: var(--gradient-hearth); }
   .shadow-soft { box-shadow: var(--shadow-soft); }

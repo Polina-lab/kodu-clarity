@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Calculator } from "./Calculator";
 import logo from "@/assets/logo.svg";
+import peopleHero from "@/assets/people-hero.jpg";
 import { ArrowRight, CheckCircle2, Home, Phone } from "lucide-react";
 
 export function Hero() {
@@ -58,10 +59,13 @@ export function Hero() {
               </div>
             ))}
           </div>
-          <div className="mt-7 inline-flex items-center gap-4 rounded-2xl border border-border bg-card/55 px-5 py-3 shadow-soft backdrop-blur-sm">
-            <img src={logo} alt="Kodu ja Lagi" className="h-16 md:h-20 w-auto opacity-90" />
-            <span className="hidden sm:block h-12 w-px bg-border" />
-            <span className="hidden sm:block text-xs uppercase tracking-[0.22em] text-muted-foreground">Kodu ja Lagi</span>
+          <div className="mt-8 relative rounded-3xl overflow-hidden border border-border shadow-warm max-w-xl mx-auto lg:mx-0">
+            <img src={peopleHero} alt="" loading="lazy" width={1280} height={960} className="w-full h-56 sm:h-64 object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/10 to-transparent" />
+            <div className="absolute bottom-4 left-5 right-5 flex items-center gap-3">
+              <img src={logo} alt="Kodu ja Lagi" className="h-9 w-auto opacity-95 drop-shadow" />
+              <span className="text-xs uppercase tracking-[0.22em] text-primary-foreground/95 drop-shadow">Kodu ja Lagi</span>
+            </div>
           </div>
         </div>
         <div className="lg:pl-6">

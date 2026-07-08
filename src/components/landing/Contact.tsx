@@ -4,6 +4,7 @@ import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { useLead } from "@/lib/lead-context";
 import { z } from "zod";
 import { toast } from "sonner";
+import peopleContact from "@/assets/people-contact.jpg";
 
 const schema = z.object({
   name: z.string().trim().min(2).max(80),
@@ -54,6 +55,10 @@ export function Contact() {
             <Info icon={Clock} label={`${t("contact.hours")}: ${t("topbar.hours")}`} />
             <Info icon={MapPin} label={t("contact.address")} />
           </ul>
+          <div className="mt-8 relative rounded-3xl overflow-hidden border border-border shadow-warm max-w-sm">
+            <img src={peopleContact} alt="" loading="lazy" width={1024} height={1280} className="w-full h-72 object-cover object-top" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/35 to-transparent" />
+          </div>
         </div>
         <form onSubmit={onSubmit} className="lg:col-span-3 bg-card rounded-3xl p-7 sm:p-9 border border-border shadow-warm">
           <div className="grid sm:grid-cols-2 gap-4">
