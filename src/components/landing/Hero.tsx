@@ -10,66 +10,67 @@ export function Hero() {
   const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-warm-gradient" />
-      <div className="absolute left-0 top-0 h-40 w-40 rounded-full bg-secondary/10 blur-3xl -z-10" />
-      <div className="absolute left-[8%] bottom-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl -z-10 hidden lg:block" />
-      {/* decorative logo watermark */}
-      <img
-        src={logo}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute -right-24 -bottom-24 w-[620px] max-w-[75%] opacity-[0.05] -z-10 hidden md:block"
-      />
-      <img
-        src={logo}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute -left-16 top-10 w-[300px] opacity-[0.05] -z-10 hidden lg:block"
-      />
+    <section id="top" className="relative overflow-hidden isolate">
+      {/* Full-bleed hero photo */}
+      <div className="absolute inset-0 -z-20">
+        <img
+          src={peopleHero}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+      {/* Warm dark gradient overlay for legibility */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#2a1a10]/85 via-[#2a1a10]/55 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#1a0f08]/70 via-transparent to-[#1a0f08]/20" />
+      {/* Warm glow accents (LED-inspired) */}
+      <div className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-amber-300/25 blur-[120px] -z-10" />
+      <div className="pointer-events-none absolute bottom-10 right-1/3 h-80 w-80 rounded-full bg-orange-400/15 blur-[130px] -z-10" />
 
-      <div className="container mx-auto px-6 pt-10 pb-14 lg:pt-16 lg:pb-20 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-        <div className="fade-up text-center lg:text-left">
-          <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card/70 px-3 py-2 shadow-soft backdrop-blur-sm mb-5">
-            <span className="size-8 rounded-full bg-primary/10 flex items-center justify-center">
-              <Home className="size-4 text-primary" />
+      <div className="container mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center min-h-[640px]">
+        <div className="fade-up text-center lg:text-left text-primary-foreground">
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/25 bg-white/10 backdrop-blur-md px-3 py-2 shadow-soft mb-5">
+            <span className="size-8 rounded-full bg-amber-300/30 flex items-center justify-center">
+              <Home className="size-4 text-amber-100" />
             </span>
-            <span className="text-xs font-medium uppercase tracking-[0.22em] text-secondary">{t("hero.eyebrow")}</span>
+            <span className="text-xs font-medium uppercase tracking-[0.22em] text-amber-100">{t("hero.eyebrow")}</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.08]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
             {t("hero.title")}
           </h1>
-          <div className="mt-5 h-px w-24 bg-secondary/30 mx-auto lg:mx-0" />
-          <p className="mt-5 text-base lg:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
+          <div className="mt-5 h-px w-24 bg-amber-200/60 mx-auto lg:mx-0" />
+          <p className="mt-5 text-base lg:text-lg text-white/85 max-w-xl leading-relaxed mx-auto lg:mx-0">
             {t("hero.subtitle")}
           </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <button onClick={scrollToContact} className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-secondary transition-colors shadow-soft">
+          <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <button
+              onClick={scrollToContact}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)] hover:shadow-[0_14px_40px_-8px_rgba(232,140,80,0.7)]"
+            >
               {t("nav.cta")} <ArrowRight className="size-4" />
             </button>
-            <a href={`tel:${t("topbar.phone")}`} className="inline-flex items-center justify-center gap-2 rounded-full bg-card/80 border border-border text-foreground px-6 py-3 font-medium hover:bg-sand transition-colors">
-              <Phone className="size-4 text-primary" /> {t("topbar.phone")}
+            <a
+              href={`tel:${t("topbar.phone")}`}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/12 backdrop-blur-md border border-white/30 text-white px-7 py-3.5 font-medium hover:bg-white/20 transition-colors"
+            >
+              <Phone className="size-4 text-amber-200" /> {t("topbar.phone")}
             </a>
           </div>
-          <div className="mt-6 grid gap-2 text-left max-w-xl mx-auto lg:mx-0">
+          <div className="mt-7 grid gap-2 text-left max-w-xl mx-auto lg:mx-0">
             {trustItems.map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="size-4 text-secondary shrink-0" />
+              <div key={item} className="flex items-center gap-2 text-sm text-white/85">
+                <CheckCircle2 className="size-4 text-amber-200 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
           </div>
-          <div className="mt-8 relative rounded-3xl overflow-hidden border border-border shadow-warm max-w-xl mx-auto lg:mx-0">
-            <img src={peopleHero} alt="" loading="lazy" width={1280} height={960} className="w-full h-56 sm:h-64 object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/10 to-transparent" />
-            <div className="absolute bottom-4 left-5 right-5 flex items-center gap-3">
-              <img src={logo} alt="Kodu ja Lagi" className="h-9 w-auto opacity-95 drop-shadow" />
-              <span className="text-xs uppercase tracking-[0.22em] text-primary-foreground/95 drop-shadow">Kodu ja Lagi</span>
-            </div>
+          <div className="mt-8 hidden lg:flex items-center gap-3 opacity-90">
+            <img src={logo} alt="Kodu ja Lagi" className="h-8 w-auto drop-shadow" />
+            <span className="text-xs uppercase tracking-[0.22em] text-white/80">Kodu ja Lagi</span>
           </div>
         </div>
-        <div className="lg:pl-6">
-          <Calculator />
+        <div className="lg:pl-4">
+          <Calculator glass />
         </div>
       </div>
     </section>

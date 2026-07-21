@@ -6,7 +6,7 @@ const TYPE_PRICES: Record<string, number> = {
   stretch: 25, suspended: 35, acoustic: 45, lighting: 40, modern: 50, custom: 60,
 };
 
-export function Calculator() {
+export function Calculator({ glass = false }: { glass?: boolean }) {
   const { t } = useTranslation();
   const { scrollToContact } = useLead();
   const [type, setType] = useState<string>("stretch");
@@ -26,8 +26,12 @@ export function Calculator() {
 
   const types = ["stretch", "suspended", "acoustic", "lighting", "modern", "custom"];
 
+  const shellClass = glass
+    ? "bg-white/75 backdrop-blur-xl border border-white/60 rounded-3xl p-6 sm:p-8 shadow-[0_30px_80px_-24px_rgba(60,30,10,0.45)]"
+    : "bg-card border border-border rounded-3xl p-6 sm:p-8 shadow-warm";
+
   return (
-    <div id="calculator" className="bg-card border border-border rounded-3xl p-6 sm:p-8 shadow-warm">
+    <div id="calculator" className={shellClass}>
       <div className="mb-6">
         <h3 className="text-2xl sm:text-3xl text-foreground">{t("calc.title")}</h3>
         <p className="text-sm text-muted-foreground mt-1">{t("calc.subtitle")}</p>
