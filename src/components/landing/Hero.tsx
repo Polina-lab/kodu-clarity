@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Calculator } from "./Calculator";
-import logo from "@/assets/logo.svg";
 import peopleHero from "@/assets/people-hero.jpg";
-import { ArrowRight, CheckCircle2, Home, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 
 export function Hero() {
   const { t } = useTranslation();
@@ -17,29 +16,23 @@ export function Hero() {
           src={peopleHero}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "50% 85%" }}
         />
       </div>
-      {/* Warm dark gradient overlay for legibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#2a1a10]/85 via-[#2a1a10]/55 to-transparent" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#1a0f08]/70 via-transparent to-[#1a0f08]/20" />
+      {/* Soft top-to-bottom overlay so upper text/calc area stays legible while faces below remain visible */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a0f08]/75 via-[#1a0f08]/25 to-transparent" />
       {/* Warm glow accents (LED-inspired) */}
       <div className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-amber-300/25 blur-[120px] -z-10" />
-      <div className="pointer-events-none absolute bottom-10 right-1/3 h-80 w-80 rounded-full bg-orange-400/15 blur-[130px] -z-10" />
+      <div className="pointer-events-none absolute -top-10 right-0 h-80 w-80 rounded-full bg-orange-400/15 blur-[130px] -z-10" />
 
-      <div className="container mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center min-h-[640px]">
+      <div className="container mx-auto px-6 pt-14 pb-[26rem] lg:pt-20 lg:pb-[22rem] grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
         <div className="fade-up text-center lg:text-left text-primary-foreground">
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/25 bg-white/10 backdrop-blur-md px-3 py-2 shadow-soft mb-5">
-            <span className="size-8 rounded-full bg-amber-300/30 flex items-center justify-center">
-              <Home className="size-4 text-amber-100" />
-            </span>
-            <span className="text-xs font-medium uppercase tracking-[0.22em] text-amber-100">{t("hero.eyebrow")}</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.45)]">
             {t("hero.title")}
           </h1>
           <div className="mt-5 h-px w-24 bg-amber-200/60 mx-auto lg:mx-0" />
-          <p className="mt-5 text-base lg:text-lg text-white/85 max-w-xl leading-relaxed mx-auto lg:mx-0">
+          <p className="mt-5 text-base lg:text-lg text-white/90 max-w-xl leading-relaxed mx-auto lg:mx-0 drop-shadow-[0_1px_10px_rgba(0,0,0,0.4)]">
             {t("hero.subtitle")}
           </p>
           <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -56,17 +49,13 @@ export function Hero() {
               <Phone className="size-4 text-amber-200" /> {t("topbar.phone")}
             </a>
           </div>
-          <div className="mt-7 grid gap-2 text-left max-w-xl mx-auto lg:mx-0">
+          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start">
             {trustItems.map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm text-white/85">
+              <div key={item} className="flex items-center gap-2 text-sm text-white/90 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
                 <CheckCircle2 className="size-4 text-amber-200 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
-          </div>
-          <div className="mt-8 hidden lg:flex items-center gap-3 opacity-90">
-            <img src={logo} alt="Kodu ja Lagi" className="h-8 w-auto drop-shadow" />
-            <span className="text-xs uppercase tracking-[0.22em] text-white/80">Kodu ja Lagi</span>
           </div>
         </div>
         <div className="lg:pl-4">
