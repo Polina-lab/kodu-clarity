@@ -55,12 +55,18 @@ export function Contact() {
             <Info icon={Clock} label={`${t("contact.hours")}: ${t("topbar.hours")}`} />
             <Info icon={MapPin} label={t("contact.address")} />
           </ul>
-          <div className="mt-8 relative rounded-3xl overflow-hidden border border-border shadow-warm max-w-sm">
-            <img src={peopleContact} alt="" loading="lazy" width={1024} height={1280} className="w-full h-72 object-cover object-top" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/35 to-transparent" />
+          <div className="mt-10 relative max-w-sm">
+            <div
+              className="relative overflow-hidden"
+              style={{ borderRadius: "56% 44% 52% 48% / 46% 54% 48% 52%" }}
+            >
+              <img src={peopleContact} alt="" loading="lazy" width={1024} height={1280} className="w-full h-72 object-cover object-top" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+            </div>
+            <div className="pointer-events-none absolute -inset-6 -z-10 bg-amber-300/15 blur-3xl rounded-full" />
           </div>
         </div>
-        <form onSubmit={onSubmit} className="lg:col-span-3 bg-card rounded-3xl p-7 sm:p-9 border border-border shadow-warm">
+        <form onSubmit={onSubmit} className="lg:col-span-3 bg-card/80 backdrop-blur-sm rounded-3xl p-7 sm:p-9">
           <div className="grid sm:grid-cols-2 gap-4">
             <Input name="name" label={t("contact.name")} required />
             <Input name="phone" label={t("contact.phone")} type="tel" required />
