@@ -47,31 +47,46 @@ export function Hero() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start">
-          {/* Text: on mobile pushed to bottom of photo area */}
-          <div className="fade-up text-left text-primary-foreground min-h-[42vh] lg:min-h-0 flex flex-col justify-end lg:justify-start">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+          {/* Left: mobile-only text over photo; on desktop this column stays empty to show faces */}
+          <div className="fade-up lg:hidden text-left text-primary-foreground min-h-[42vh] flex flex-col justify-end">
+            <h1 className="text-4xl sm:text-5xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
               {t("hero.title")}
             </h1>
             <div className="mt-5 h-px w-24 bg-amber-200/60" />
-            <p className="mt-5 text-base lg:text-lg text-white/90 max-w-xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]">
+            <p className="mt-5 text-base text-white/90 max-w-xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]">
               {t("hero.subtitle")}
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)] hover:shadow-[0_14px_40px_-8px_rgba(232,140,80,0.7)]"
-              >
+              <button onClick={scrollToContact}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)]">
                 {t("nav.cta")} <ArrowRight className="size-4" />
               </button>
-              <a
-                href={`tel:${t("topbar.phone")}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white/12 backdrop-blur-md border border-white/30 text-white px-7 py-3.5 font-medium hover:bg-white/20 transition-colors"
-              >
+              <a href={`tel:${t("topbar.phone")}`}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white/12 backdrop-blur-md border border-white/30 text-white px-7 py-3.5 font-medium hover:bg-white/20 transition-colors">
                 <Phone className="size-4 text-amber-200" /> {t("topbar.phone")}
               </a>
             </div>
           </div>
-          <div className="lg:pl-4">
+          <div className="lg:col-start-2 lg:pl-4 space-y-5">
+            <div className="hidden lg:block fade-up text-left text-primary-foreground">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+                {t("hero.title")}
+              </h1>
+              <div className="mt-4 h-px w-24 bg-amber-200/60" />
+              <p className="mt-4 text-base lg:text-lg text-white/90 max-w-xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]">
+                {t("hero.subtitle")}
+              </p>
+              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                <button onClick={scrollToContact}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)]">
+                  {t("nav.cta")} <ArrowRight className="size-4" />
+                </button>
+                <a href={`tel:${t("topbar.phone")}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/12 backdrop-blur-md border border-white/30 text-white px-6 py-3 font-medium hover:bg-white/20 transition-colors">
+                  <Phone className="size-4 text-amber-200" /> {t("topbar.phone")}
+                </a>
+              </div>
+            </div>
             <Calculator glass />
           </div>
         </div>
