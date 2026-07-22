@@ -28,7 +28,7 @@ export function Services() {
             <button
               key={s.key}
               onClick={() => scrollToContact(`${t(`services.items.${s.key}.name`)}: ${t(`services.items.${s.key}.desc`)}`)}
-              className="group relative text-left rounded-3xl overflow-hidden aspect-[4/5] shadow-soft hover:shadow-warm transition-all duration-500 hover:-translate-y-1"
+              className="group relative text-left rounded-3xl overflow-hidden aspect-[16/9] shadow-soft hover:shadow-warm transition-all duration-500 hover:-translate-y-1"
             >
               <img
                 src={s.img}
