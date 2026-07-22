@@ -44,43 +44,43 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 bg-warm-gradient">
       <div className="container mx-auto px-6 grid lg:grid-cols-5 gap-10">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           <span className="text-xs uppercase tracking-[0.3em] text-secondary">07</span>
           <h2 className="text-4xl sm:text-5xl text-foreground mt-3">{t("contact.title")}</h2>
           <p className="mt-4 text-muted-foreground text-lg">{t("contact.subtitle")}</p>
 
-          <ul className="mt-10 space-y-4 text-sm">
-            <Info icon={Phone} label={t("topbar.phone")} href={`tel:${t("topbar.phone")}`} />
-            <Info icon={Mail} label={t("topbar.email")} href={`mailto:${t("topbar.email")}`} />
-            <Info icon={Clock} label={`${t("contact.hours")}: ${t("topbar.hours")}`} />
-            <Info icon={MapPin} label={t("contact.address")} />
-          </ul>
-          <div className="mt-10 relative max-w-sm">
-            <div
-              className="relative overflow-hidden"
-              style={{ borderRadius: "56% 44% 52% 48% / 46% 54% 48% 52%" }}
-            >
-              <img src={peopleContact} alt="" loading="lazy" width={1024} height={1280} className="w-full h-72 object-cover object-top" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+          <div className="mt-10 flex flex-col sm:flex-row items-start gap-6">
+            <div className="relative shrink-0">
+              <div
+                className="relative overflow-hidden w-40 h-40 sm:w-48 sm:h-48"
+                style={{ borderRadius: "56% 44% 52% 48% / 46% 54% 48% 52%" }}
+              >
+                <img src={peopleContact} alt="" loading="lazy" width={512} height={512} className="w-full h-full object-cover object-top" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              </div>
+              <div className="pointer-events-none absolute -inset-4 -z-10 bg-amber-300/15 blur-3xl rounded-full" />
             </div>
-            <div className="pointer-events-none absolute -inset-6 -z-10 bg-amber-300/15 blur-3xl rounded-full" />
+            <ul className="space-y-3 text-sm flex-1 min-w-0">
+              <Info icon={Phone} label={t("topbar.phone")} href={`tel:${t("topbar.phone")}`} />
+              <Info icon={Mail} label={t("topbar.email")} href={`mailto:${t("topbar.email")}`} />
+              <Info icon={Clock} label={`${t("contact.hours")}: ${t("topbar.hours")}`} />
+              <Info icon={MapPin} label={t("contact.address")} />
+            </ul>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="lg:col-span-3 bg-card/80 backdrop-blur-sm rounded-3xl p-7 sm:p-9">
-          <div className="grid sm:grid-cols-2 gap-4">
+        <form onSubmit={onSubmit} className="lg:col-span-2 bg-card/80 backdrop-blur-sm rounded-3xl p-5 sm:p-6">
+          <div className="grid gap-3">
             <Input name="name" label={t("contact.name")} required />
             <Input name="phone" label={t("contact.phone")} type="tel" required />
-            <div className="sm:col-span-2"><Input name="email" label={t("contact.email")} type="email" required /></div>
-            <div className="sm:col-span-2">
-              <label className="block">
-                <span className="block text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">{t("contact.message")}</span>
-                <textarea name="message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)}
-                  maxLength={2000}
-                  className="w-full bg-cream border border-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ring/50 resize-none" />
-              </label>
-            </div>
+            <Input name="email" label={t("contact.email")} type="email" required />
+            <label className="block">
+              <span className="block text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">{t("contact.message")}</span>
+              <textarea name="message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)}
+                maxLength={2000}
+                className="w-full bg-cream border border-border rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-ring/50 resize-none" />
+            </label>
           </div>
-          <button type="submit" className="mt-6 w-full sm:w-auto rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-medium hover:bg-secondary transition-colors shadow-soft">
+          <button type="submit" className="mt-5 w-full rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-secondary transition-colors shadow-soft">
             {t("contact.submit")}
           </button>
         </form>
@@ -94,7 +94,7 @@ function Input({ name, label, type = "text", required }: { name: string; label: 
     <label className="block">
       <span className="block text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">{label}</span>
       <input name={name} type={type} required={required} maxLength={200}
-        className="w-full bg-cream border border-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ring/50" />
+        className="w-full bg-cream border border-border rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-ring/50" />
     </label>
   );
 }

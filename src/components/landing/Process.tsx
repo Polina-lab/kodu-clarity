@@ -11,11 +11,11 @@ export function Process() {
       <div className="pointer-events-none absolute -bottom-20 -left-10 h-80 w-80 rounded-full bg-amber-300/15 blur-[120px]" />
       <div className="container mx-auto px-6 relative">
         <SectionTitle eyebrow="04" title={t("process.title")} subtitle={t("process.subtitle")} />
-        <div className="grid lg:grid-cols-5 gap-12 mt-14 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 mt-14 items-stretch">
           <div className="lg:col-span-2">
-            <div className="lg:sticky lg:top-24 relative">
+            <div className="lg:sticky lg:top-24 relative h-full">
               <div
-                className="relative overflow-hidden shadow-warm"
+                className="relative overflow-hidden shadow-warm h-full"
                 style={{ borderRadius: "44% 56% 48% 52% / 56% 44% 52% 48%" }}
               >
                 <img
@@ -24,7 +24,7 @@ export function Process() {
                   loading="lazy"
                   width={1280}
                   height={1600}
-                  className="w-full h-full object-cover aspect-[3/4]"
+                  className="w-full h-full object-cover aspect-[4/5] lg:aspect-auto lg:max-h-[560px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/25 to-transparent" />
               </div>
