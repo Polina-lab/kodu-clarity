@@ -37,12 +37,14 @@ export function Advantages() {
           </div>
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5">
             {items.map(({ k, Icon }) => (
-              <div key={k} className="rounded-3xl p-6 bg-card/60 hover:bg-card transition-colors">
-                <div className="size-12 rounded-2xl bg-amber-100/70 text-secondary flex items-center justify-center mb-4 shadow-[inset_0_0_0_1px_rgba(200,140,80,0.15)]">
-                  <Icon className="size-5" />
+              <div key={k} className="rounded-2xl p-4 bg-card/60 hover:bg-card transition-colors flex items-start gap-3 text-left">
+                <div className="size-10 rounded-xl bg-amber-100/70 text-secondary flex items-center justify-center shrink-0 shadow-[inset_0_0_0_1px_rgba(200,140,80,0.15)]">
+                  <Icon className="size-4" />
                 </div>
-                <h3 className="text-lg text-foreground mb-1.5">{t(`advantages.items.${k}.t`)}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{t(`advantages.items.${k}.d`)}</p>
+                <div className="min-w-0">
+                  <h3 className="text-base text-foreground leading-tight">{t(`advantages.items.${k}.t`)}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mt-1">{t(`advantages.items.${k}.d`)}</p>
+                </div>
               </div>
             ))}
           </div>
