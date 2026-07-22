@@ -17,23 +17,25 @@ export function Advantages() {
       <div className="pointer-events-none absolute -top-24 right-10 h-72 w-72 rounded-full bg-amber-300/20 blur-[110px]" />
       <div className="container mx-auto px-6 relative">
         <SectionTitle eyebrow="02" title={t("advantages.title")} />
-        <div className="grid lg:grid-cols-3 gap-10 mt-14 items-start">
+        <div className="grid lg:grid-cols-3 gap-10 mt-14 items-stretch">
           <div className="lg:col-span-1 relative">
-            <div
-              className="relative overflow-hidden shadow-warm"
-              style={{ borderRadius: "58% 42% 55% 45% / 48% 55% 45% 52%" }}
-            >
-              <img
-                src={peopleAdvantages}
-                alt=""
-                loading="lazy"
-                width={1280}
-                height={960}
-                className="w-full h-full object-cover aspect-[4/5]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/25 to-transparent" />
+            <div className="lg:sticky lg:top-24">
+              <div
+                className="relative overflow-hidden shadow-warm"
+                style={{ borderRadius: "58% 42% 55% 45% / 48% 55% 45% 52%" }}
+              >
+                <img
+                  src={peopleAdvantages}
+                  alt=""
+                  loading="lazy"
+                  width={1280}
+                  height={960}
+                  className="w-full h-full object-cover aspect-[4/5]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/25 to-transparent" />
+              </div>
+              <div className="pointer-events-none absolute -inset-6 -z-10 bg-amber-300/15 blur-3xl rounded-full" />
             </div>
-            <div className="pointer-events-none absolute -inset-6 -z-10 bg-amber-300/15 blur-3xl rounded-full" />
           </div>
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5">
             {items.map(({ k, Icon }) => (
