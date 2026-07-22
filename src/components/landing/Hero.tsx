@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Calculator } from "./Calculator";
-import peopleHero from "@/assets/people-hero.jpg";
+import peopleHero from "@/assets/people-hero4.jpg";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 
 export function Hero() {
@@ -11,13 +11,13 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden isolate">
       {/* Full-bleed hero photo */}
-      <div className="absolute inset-0 -z-20">
+      <div className="absolute bottom-0 left-0 w-[100%] h-[100%] -z-20 overflow-hidden">
         <img
           src={peopleHero}
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover"
-          style={{ objectPosition: "50% 85%" }}
+          style={{ objectPosition: "top right" }}
         />
       </div>
       {/* Soft top-to-bottom overlay so upper text/calc area stays legible while faces below remain visible */}
@@ -26,7 +26,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-amber-300/25 blur-[120px] -z-10" />
       <div className="pointer-events-none absolute -top-10 right-0 h-80 w-80 rounded-full bg-orange-400/15 blur-[130px] -z-10" />
 
-      <div className="container mx-auto px-6 pt-14 pb-[26rem] lg:pt-20 lg:pb-[22rem] grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+      <div className="container mx-auto px-6 pt-14 pb-[2rem] lg:pt-20 lg:pb-[2rem] grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
         <div className="fade-up text-center lg:text-left text-primary-foreground">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.45)]">
             {t("hero.title")}
