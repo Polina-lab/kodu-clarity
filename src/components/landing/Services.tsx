@@ -39,13 +39,9 @@ export function Services() {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[900ms] group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f08]/90 via-[#1a0f08]/40 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
-                <h3 className="text-2xl leading-tight drop-shadow">{t(`services.items.${s.key}.name`)}</h3>
-                <p className="text-sm text-white/85 leading-relaxed mt-2 line-clamp-3">{t(`services.items.${s.key}.desc`)}</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-amber-200 group-hover:text-amber-100 transition-colors">
-                  <span className="h-px w-6 bg-amber-200/70 group-hover:w-10 transition-all" />
-                  →
-                </span>
+              <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
+                <h3 className="text-xl leading-tight drop-shadow">{t(`services.items.${s.key}.name`)}</h3>
+                <p className="text-xs text-white/85 leading-relaxed mt-1 line-clamp-2">{t(`services.items.${s.key}.desc`)}</p>
               </div>
             </button>
           ))}
