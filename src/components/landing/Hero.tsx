@@ -20,11 +20,12 @@ export function Hero() {
           style={{ objectPosition: "left bottom" }}
         />
       </div>
-      {/* Overlays — desktop: darker on the right so calculator sits comfortably. Mobile: darkens bottom-left for text legibility. */}
-      <div className="hidden lg:block absolute inset-0 -z-10 bg-gradient-to-r from-[#1a0f08]/55 via-[#1a0f08]/25 to-[#1a0f08]/55" />
-      <div className="hidden lg:block absolute inset-0 -z-10 bg-gradient-to-b from-[#1a0f08]/40 via-transparent to-[#1a0f08]/30" />
-      <div className="lg:hidden absolute top-0 left-0 right-0 h-[78vh] -z-10 bg-gradient-to-tr from-[#1a0f08]/90 via-[#1a0f08]/40 to-transparent" />
-      {/* Mobile: gradient fade from photo bottom into the solid background so the calculator sits on solid bg */}
+      {/* Desktop overlays: subtle darken on right for calc legibility */}
+      <div className="hidden lg:block absolute inset-0 -z-10 bg-gradient-to-r from-[#1a0f08]/45 via-[#1a0f08]/20 to-[#1a0f08]/55" />
+      <div className="hidden lg:block absolute inset-0 -z-10 bg-gradient-to-b from-[#1a0f08]/30 via-transparent to-[#1a0f08]/40" />
+      {/* Mobile overlays: darken top area behind centered text */}
+      <div className="lg:hidden absolute top-0 left-0 right-0 h-[78vh] -z-10 bg-gradient-to-b from-[#1a0f08]/75 via-[#1a0f08]/35 to-transparent" />
+      {/* Mobile: fade image bottom into solid background before calculator */}
       <div className="lg:hidden absolute left-0 right-0 -z-10 pointer-events-none"
            style={{ top: "calc(78vh - 8rem)", height: "8rem", background: "linear-gradient(to bottom, transparent, var(--background))" }} />
 
@@ -32,23 +33,11 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-amber-300/25 blur-[120px] -z-10" />
       <div className="pointer-events-none absolute -top-10 right-0 h-80 w-80 rounded-full bg-orange-400/15 blur-[130px] -z-10" />
 
-      <div className="container mx-auto px-6 pt-6 lg:pt-14 pb-8 lg:pb-12 relative">
-        {/* Trust badge pills — top-left */}
-        <div className="flex flex-wrap gap-2 mb-6 lg:mb-8">
-          {trustItems.map((item) => (
-            <span
-              key={item}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 px-3.5 py-1.5 text-xs sm:text-sm text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
-            >
-              <CheckCircle2 className="size-3.5 text-amber-200 shrink-0" />
-              <span>{item}</span>
-            </span>
-          ))}
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start">
-          {/* Left: mobile-only text over photo; on desktop this column stays empty to show faces */}
-          <div className="fade-up lg:hidden text-left text-primary-foreground min-h-[42vh] flex flex-col justify-end">
+      <div className="container mx-auto px-6 pt-8 lg:pt-14 pb-8 lg:pb-12 relative">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-stretch">
+          {/* LEFT column */}
+          {/* Mobile: centered text over photo (no badges on mobile), then empty space showing faces */}
+          <div className="fade-up lg:hidden text-center text-primary-foreground min-h-[46vh] flex flex-col items-center pt-4">
             <h1 className="text-4xl sm:text-5xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
               {t("hero.title")}
             </h1>
@@ -56,7 +45,7 @@ export function Hero() {
             <p className="mt-5 text-base text-white/90 max-w-xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]">
               {t("hero.subtitle")}
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 items-center">
               <button onClick={scrollToContact}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)]">
                 {t("nav.cta")} <ArrowRight className="size-4" />
@@ -67,6 +56,33 @@ export function Hero() {
               </a>
             </div>
           </div>
+
+          {/* Desktop LEFT: CTA buttons at top-left, badges pinned to bottom-left */}
+          <div className="hidden lg:flex fade-up flex-col justify-between min-h-[70vh]">
+            <div className="flex flex-wrap gap-3">
+              <button onClick={scrollToContact}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)]">
+                {t("nav.cta")} <ArrowRight className="size-4" />
+              </button>
+              <a href={`tel:${t("topbar.phone")}`}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white px-6 py-3 font-medium hover:bg-white/25 transition-colors">
+                <Phone className="size-4 text-amber-200" /> {t("topbar.phone")}
+              </a>
+            </div>
+            <div className="flex flex-wrap gap-2 max-w-md">
+              {trustItems.map((item) => (
+                <span
+                  key={item}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 px-3.5 py-1.5 text-xs sm:text-sm text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
+                >
+                  <CheckCircle2 className="size-3.5 text-amber-200 shrink-0" />
+                  <span>{item}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT column: title, description, calculator */}
           <div className="lg:col-start-2 lg:pl-4 space-y-5">
             <div className="hidden lg:block fade-up text-left text-primary-foreground">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl leading-[1.08] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
@@ -76,16 +92,6 @@ export function Hero() {
               <p className="mt-4 text-base lg:text-lg text-white/90 max-w-xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]">
                 {t("hero.subtitle")}
               </p>
-              <div className="mt-5 flex flex-col sm:flex-row gap-3">
-                <button onClick={scrollToContact}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-secondary transition-all shadow-[0_10px_30px_-8px_rgba(232,140,80,0.55)]">
-                  {t("nav.cta")} <ArrowRight className="size-4" />
-                </button>
-                <a href={`tel:${t("topbar.phone")}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/12 backdrop-blur-md border border-white/30 text-white px-6 py-3 font-medium hover:bg-white/20 transition-colors">
-                  <Phone className="size-4 text-amber-200" /> {t("topbar.phone")}
-                </a>
-              </div>
             </div>
             <Calculator glass />
           </div>
