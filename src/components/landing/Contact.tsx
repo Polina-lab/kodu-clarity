@@ -43,16 +43,16 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-warm-gradient">
-      <div className="container mx-auto px-6 grid lg:grid-cols-5 gap-10">
-        <div className="lg:col-span-3">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
+        <div>
           <span className="text-xs uppercase tracking-[0.3em] text-secondary">07</span>
           <h2 className="text-4xl sm:text-5xl text-foreground mt-3">{t("contact.title")}</h2>
           <p className="mt-4 text-muted-foreground text-lg">{t("contact.subtitle")}</p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-start gap-6">
+          <div className="mt-8 flex flex-col sm:flex-row items-start gap-5">
             <div className="relative shrink-0">
               <div
-                className="relative overflow-hidden w-40 h-40 sm:w-48 sm:h-48"
+                className="relative overflow-hidden w-36 h-36 sm:w-40 sm:h-40"
                 style={{ borderRadius: "56% 44% 52% 48% / 46% 54% 48% 52%" }}
               >
                 <img src={peopleContact} alt="" loading="lazy" width={512} height={512} className="w-full h-full object-cover object-top" />
@@ -68,7 +68,8 @@ export function Contact() {
             </ul>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="lg:col-span-2 bg-card/80 backdrop-blur-sm rounded-3xl p-5 sm:p-6">
+        <form onSubmit={onSubmit} className="bg-card/80 backdrop-blur-sm rounded-3xl p-5 sm:p-6 w-full">
+
           <div className="grid gap-3">
             <Input name="name" label={t("contact.name")} required />
             <Input name="phone" label={t("contact.phone")} type="tel" required />
